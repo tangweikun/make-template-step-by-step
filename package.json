@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "lint:fix"
+    "*": "lint:fix"
   },
   "husky": {
     "hooks": {
