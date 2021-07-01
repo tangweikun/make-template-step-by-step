@@ -72,3 +72,30 @@ On the `.eslintrc.json` file, add the follow:
   }
 }
 ```
+## Step5 Add hooks for pre-commit
+
+5.1 Install husky and lint-staged
+
+```bash
+yarn add husky lint-staged -D
+```
+
+5.2 The fastest way to start using lint-staged is to run the following command in your terminal:
+
+```bash
+npx mrm@2 lint-staged
+```
+
+5.3 Edit package.json > prepare script and run it once:
+
+
+```bash
+npm set-script prepare "husky install"
+npm run prepare
+```
+
+5.4 Add a hook:
+
+```bash
+npx husky add .husky/pre-commit "npm test"
+```

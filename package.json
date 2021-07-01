@@ -6,16 +6,15 @@
   "scripts": {
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
+    "test": "echo TODO",
     "dev": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*": "lint:fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix"
+    ]
   },
   "dependencies": {
     "react": "^17.0.2",
