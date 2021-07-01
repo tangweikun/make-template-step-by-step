@@ -1,0 +1,6 @@
+*.css
+*.scss
+*.html
+*.svg
+node_modules
+dist
