@@ -72,6 +72,7 @@ On the `.eslintrc.json` file, add the follow:
   }
 }
 ```
+
 ## Step5 Add hooks for pre-commit
 
 5.1 Install husky and lint-staged
@@ -88,7 +89,6 @@ npx mrm@2 lint-staged
 
 5.3 Edit package.json > prepare script and run it once:
 
-
 ```bash
 npm set-script prepare "husky install"
 npm run prepare
@@ -99,3 +99,32 @@ npm run prepare
 ```bash
 npx husky add .husky/pre-commit "npm test"
 ```
+
+## Step6 Add commitlint
+
+```bash
+yarn add @commitlint/config-conventional @commitlint/cli -D
+```
+
+根目录下创建 commitlint.config.js
+
+```js
+module.exports = { extends: ['@commitlint/config-conventional'] };
+```
+
+```bash
+# Add hook
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+```
+
+build
+ci
+chore
+docs
+feat
+fix
+perf
+refactor
+revert
+style
+test

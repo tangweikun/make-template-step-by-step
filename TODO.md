@@ -6,7 +6,7 @@ release2.0 代码风格统一
 
 - [x] 集成 prettier, eslint
 - [x] 集成 Pre-commit Hook
-- [ ] 集成 commit lint
+- [x] 集成 commit lint
 
 release3.0 集成 antd,国际化,normalize.css
 
