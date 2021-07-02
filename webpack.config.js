@@ -50,11 +50,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      publicPath: '/',
     }),
   ],
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
     port: 9000,
     open: true,
     hot: true,
+    historyApiFallback: {
+      // Paths with dots should still use the history fallback.
+      // See https://github.com/facebook/create-react-app/issues/387.
+      disableDotRule: true,
+      index: '/',
+    },
   },
 };

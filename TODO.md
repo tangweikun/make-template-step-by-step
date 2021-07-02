@@ -15,7 +15,7 @@ release3.0 集成 antd,国际化,normalize.css
 
 release4.0
 
-- [ ] 集成 react-router
+- [x] 集成 react-router-dom
 - [ ] 支持动态加载
 - [ ] 支持路径绝对引用
 - [ ] 引入 css 预处理器 scss
@@ -38,3 +38,4 @@ release6.0
 - [ ] antd 的样式文件过大
 - [ ] 使用 ts 重写 webpack.config
 - [ ] 替换 moment
+- [ ] historyApiFallback,publicPath,支持上下文自定义
