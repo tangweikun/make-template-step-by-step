@@ -19,6 +19,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
+              '@babel/preset-typescript',
               ['@babel/preset-react', { runtime: 'automatic' }], // runtime 去除后本地加载不到 React
             ],
           },

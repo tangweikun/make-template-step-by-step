@@ -1,5 +1,4 @@
-function App(): JSX.Element {
-  console.log(9);
+function App(): JSX.Element | null {
   return <div>App</div>;
 }
 

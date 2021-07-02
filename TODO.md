@@ -24,3 +24,11 @@ release4.0
 - [ ] 支持路径绝对引用
 - [ ] 引入 css 预处理器 scss
 - [ ] css 模块化
+
+release5.0
+
+- [ ] mock
+
+release6.0
+
+- [ ] 单元测试
