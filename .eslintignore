@@ -4,4 +4,3 @@
 *.svg
 node_modules
 dist
-webpack.config.js

@@ -10,12 +10,8 @@ release2.0 代码风格统一
 
 release3.0 集成 antd,国际化,normalize.css
 
-- [ ] 集成 antd
-- [ ] 支持主题切换
-- [ ] 支持国际化
-- [ ] 添加 BasicLayout
-- [ ] 添加 Navigation
-- [ ] 添加多层级 menu
+- [x] 集成 antd
+- [x] 支持主题切换
 
 release4.0
 
@@ -27,8 +23,18 @@ release4.0
 
 release5.0
 
-- [ ] mock
+- [ ] 支持国际化
+- [ ] 添加 BasicLayout
+- [ ] 添加 Navigation
+- [ ] 添加多层级 menu
 
 release6.0
 
 - [ ] 单元测试
+- [ ] mock
+
+其他
+
+- [ ] antd 的样式文件过大
+- [ ] 使用 ts 重写 webpack.config
+- [ ] 替换 moment

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { getTheme } = require('./config/theme.js');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -12,6 +14,22 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: { lessOptions: { javascriptEnabled: true, modifyVars: getTheme('antDesignTheme') } },
+          },
+        ],
+      },
       {
         test: /\.tsx?$/,
         use: {
