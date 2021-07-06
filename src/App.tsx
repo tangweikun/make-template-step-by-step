@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import Routers from './Routers';
+import Routers from 'src/Routers';
 import 'antd/dist/antd.less';
 import './App.css';
 

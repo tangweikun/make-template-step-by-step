@@ -1,4 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
+import P1 from 'src/pages/p1';
+import P2 from 'pages/p2';
 
 function Routers(): JSX.Element {
   return (
@@ -7,10 +9,10 @@ function Routers(): JSX.Element {
         <div>HomePage</div>
       </Route>
       <Route path="/r1">
-        <div>R1</div>
+        <P1 />
       </Route>
       <Route path="/r3/r4">
-        <div>R13333</div>
+        <P2 />
       </Route>
       <Route path="/r2/:id">
         <div>R2</div>
