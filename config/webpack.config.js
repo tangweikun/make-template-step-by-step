@@ -2,7 +2,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
-const { getTheme } = require('./config/theme.js');
+
+const { getTheme } = require('./theme.js');
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -12,6 +13,7 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 const lessRegex = /\.less$/;
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -19,8 +21,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, './src'),
-      pages: path.resolve(__dirname, './src/pages'),
+      src: path.resolve(__dirname, '../src'),
+      pages: path.resolve(__dirname, '../src/pages'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },

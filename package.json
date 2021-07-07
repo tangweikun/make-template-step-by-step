@@ -7,7 +7,7 @@
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "echo TODO",
-    "dev": "webpack serve --open",
+    "dev": "env-cmd -f config/.env.development webpack serve --config config/webpack.config.js --open",
     "build": "webpack",
     "prepare": "husky install"
   },
@@ -36,6 +36,8 @@
     "@typescript-eslint/parser": "^4.28.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

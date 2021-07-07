@@ -21,7 +21,7 @@ release4.0
 
 release5.0
 
-- [ ] 区分环境
+- [x] 区分环境
 
 release5.0
 
