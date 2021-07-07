@@ -16,11 +16,12 @@ release3.0 集成 antd,国际化,normalize.css
 release4.0
 
 - [x] 集成 react-router-dom
-- [ ] 支持路径绝对引用
-- [ ] 支持动态加载
+- [x] 支持路径绝对引用
+- [x] css 模块化
 
-- [ ] 引入 css 预处理器 scss
-- [ ] css 模块化
+release5.0
+
+- [ ] 区分环境
 
 release5.0
 
@@ -34,12 +35,23 @@ release6.0
 - [ ] 单元测试
 - [ ] mock
 
+release7.0
+
+- [ ] 支持按需加载
+- [ ] 自定义上下文路径
+
+release8.0
+
+- [ ] bundle size
+- [ ] 引入 css 预处理器 scss
+
 其他
 
 - [ ] antd 的样式文件过大
 - [ ] 使用 ts 重写 webpack.config
 - [ ] 替换 moment
 - [ ] historyApiFallback,publicPath,支持上下文自定义
+- [ ] webpack alias && tsconfig paths
 
 https://github.com/JowayYoung/bruce-cli
 https://juejin.cn/post/6844903763589726222#heading-12

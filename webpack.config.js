@@ -1,7 +1,15 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const { getTheme } = require('./config/theme.js');
+
+// style files regexes
+const cssRegex = /\.css$/;
+const cssModuleRegex = /\.module\.css$/;
+const sassRegex = /\.(scss|sass)$/;
+const sassModuleRegex = /\.module\.(scss|sass)$/;
+const lessRegex = /\.less$/;
 
 module.exports = {
   entry: './src/index.tsx',
@@ -19,12 +27,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/,
+        test: cssRegex,
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { modules: { getLocalIdent: getCSSModuleLocalIdent } } },
+        ],
+        exclude: [/node_modules/, cssModuleRegex],
       },
+      { test: cssModuleRegex, use: ['style-loader', 'css-loader'] },
       {
-        test: /\.less$/,
+        test: lessRegex,
         use: [
           'style-loader',
           'css-loader',
