@@ -25,7 +25,7 @@ release5.0
 
 release5.0
 
-- [ ] 支持国际化
+- [x] 支持国际化
 - [ ] 添加 BasicLayout
 - [ ] 添加 Navigation
 - [ ] 添加多层级 menu

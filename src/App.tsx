@@ -1,14 +1,12 @@
-import { Button } from 'antd';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Routers from 'src/Routers';
 import 'antd/dist/antd.less';
 import './App.css';
+import 'src/i18n';
 
 function App(): JSX.Element | null {
   return (
     <BrowserRouter>
-      {/* App
-      <Button type="primary">Antd</Button> */}
       <Routers />
     </BrowserRouter>
   );
